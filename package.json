@@ -1,0 +1,19 @@
+{
+  "name": "eureka-fixture-library",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Parametric retail fixture library and studio: 2D / 2.5D / 3D from one editable model.",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/ && esbuild src/app.ts --bundle --minify --format=iife --outfile=dist/app.js",
+    "dev": "mkdir -p dist && cp index.html dist/ && esbuild src/app.ts --bundle --format=iife --outfile=dist/app.js --servedir=dist --serve=8765",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.170.0",
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3"
+  }
+}
